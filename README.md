@@ -1,2 +1,2 @@
 # javascript
-Materiale til javascript undervisning for dat19v1
+Materiale til javascriptundervisning for dat19v1
