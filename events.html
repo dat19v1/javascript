@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript demo site</title>
+</head>
+<body>
+
+    <h1>JavaScript Examples</h1>
+    <div id="msg"> Hello Dat19v1 </div>
+
+    <input type="text" name="tex" id="inp_txt">
+    <div></div>
+
+   <!--<button id="btn" onclick="greet()">Klik mig</button> -->
+
+<script>
+    // selecte elementer
+    //document.getElementById('msg').innerHTML = 'WROOOOM!!!'
+    //document.getElementsByTagName('div')[1].innerText = "Nu skriver jeg til mit div tag"
+
+    // create elements
+    let btn = document.createElement('button')
+    btn.innerHTML = 'Klik mig'
+    btn.setAttribute('id', 'btn')
+    btn.setAttribute('onclick','greet()')
+    document.getElementsByTagName('div')[1].appendChild(btn);
+
+    let greet = function(){
+        let x = document.getElementById('inp_txt').value;
+        document.getElementById('msg').innerHTML = x;
+    }
+
+
+
+</script>
+
+</body>
+</html>

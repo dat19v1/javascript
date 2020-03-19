@@ -1,0 +1,42 @@
+<html>
+
+	<head>
+		<title>Change background exercise</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="style_green.css">
+		<style>
+			body {margin-top: 30px}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+
+			<h1>Dette er en overskrift</h1>
+			<p>Dette er noget tekst</p>
+
+			<button id="btn" onclick="change()" class="btn btn-danger">Change background to RED</button>
+
+		</div>
+
+
+		<script>
+			let color = 0
+
+			let change = function(){
+
+				if(color == 0) {
+					document.getElementsByTagName('link')[1].href = 'style_red.css'
+					document.getElementById('btn').innerHTML = 'Change to GREEN'
+					document.getElementById('btn').setAttribute('class', 'btn btn-success')
+					color = 1
+				} else {
+					document.getElementsByTagName('link')[1].href = 'style_green.css'
+					document.getElementById('btn').innerHTML = 'Change to RED'
+					document.getElementById('btn').setAttribute('class', 'btn btn-danger')
+					color = 0
+				}
+			}
+
+		</script>
+	</body>
+</html>
