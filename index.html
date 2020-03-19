@@ -9,5 +9,82 @@
 
     <div id="msg"> Hello Dat19v1 </div>
 
+<script>
+    let name = 'Henning'
+    console.log(name) // System.out.println
+
+    name = 123
+    console.log(name)
+
+    // Data type og Datastructure
+    let title = 'Sir'
+    console.log(typeof title)
+    let age = 123
+    console.log(typeof age)
+    let height = 12.4
+    console.log(typeof height)
+    let isMale = true
+    console.log(typeof isMale)
+
+    let students = [1, 2, 3]
+    console.log(typeof students)
+    let student = {}
+    console.log(typeof student)
+
+
+    // 2 måder at det på
+    let add = function(a, b){
+        return a+b;
+    }
+    console.log(    add(2, 3)     )
+    console.log(    add('Hello ', 'World')     )
+
+    function mul(x, y){
+        return x * y
+    }
+    console.log(    mul(2, 3)     )
+
+    let doStuff = function(func){
+        let a = 10
+        let b = 20
+        return func(a, b)
+    }
+
+    console.log(  doStuff(add)    )
+    console.log(  doStuff(mul)    )
+
+    // object
+    let Car = {
+        brand : 'Volvo',
+        mph : 123,
+        info : function(){
+            return this.brand + ' ' + this.mph
+        }
+    }
+
+    let bmw = Car
+    let fiat = Car
+    bmw.brand = 'bmw'
+    fiat.brand = 'Fiat'
+
+    console.log(  bmw  )
+    console.log(  fiat )
+
+    class Rectangle {
+        constructor(height, width) {
+            this.height = height;
+            this.width = width;
+        }
+    }
+
+    let rec1 = new Rectangle(12, 44);
+    let rec2 = new Rectangle(33, 44);
+
+
+
+
+</script>
+
+
 </body>
 </html>
