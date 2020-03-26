@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Demo</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- import JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin-top: 40px
+        }
+    </style>
+
+    <script>
+        
+        $(document).ready(function () {
+
+            $.ajax({
+                method: "GET",
+                url: "https://moviesfrontandback.herokuapp.com/api/movies/"
+            }).done(function( data ) {
+                for(var i = 0; i < data.length; i++) {
+                        $('#content').append(data[i].title + '<br>')
+                    }
+                });
+
+            $('button').click(function () {
+
+                let inp = $('#inp').val()
+
+                $.ajax({
+                    method: "DELETE",
+                    url: "https://moviesfrontandback.herokuapp.com/api/movies/",
+                    data : {title : inp, releaseYear : '1999', director : 'ME', genre : 'Horror'}
+                }).done(function( data ) {
+                    alert('Data saved')
+                });
+
+
+
+            })
+
+        })
+        
+    </script>
+    
+    
+
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Ajax Demo</h1>
+
+        <div id="content">
+            <input type="text" id="inp">
+            <button>Click me</button>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
