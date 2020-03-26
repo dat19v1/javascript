@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery_exercise</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- import JQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin-top: 40px
+        }
+    </style>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.container').append('<h1>Jquery exercise Dat19v1</h1>')
+            $('.container').append('<button>Click Me</button>')
+
+            $('.container').hide()
+            $('.container').fadeIn(3000)
+
+            $('.container').append('<div id="content" style="padding-top: 50px"></div>')
+
+            $('button').click(function () {
+                $('#content').append('<p>Dette er noget tekst!</p>')
+                $(this).html('Click me again!')
+
+                $('p').hide()
+                $('p').slideDown("slow")
+
+
+            })
+
+
+        })
+
+
+    </script>
+
+
+
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>
